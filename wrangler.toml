@@ -1,6 +1,3 @@
 name = "t1mpl2xv"
 compatibility_date = "2024-09-01"
 pages_build_output_dir = "v2"
-
-[assets]
-directory = "./v2"
