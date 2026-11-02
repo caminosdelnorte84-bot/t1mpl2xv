@@ -1,6 +1,5 @@
 name = "t1mpl2xv"
 compatibility_date = "2024-09-01"
-
 # Cloudflare Pages: sólo directorio de salida (el bloque [assets] es de Workers
 # y rompe la validación de `wrangler pages deploy`).
 pages_build_output_dir = "v2"

@@ -6,7 +6,7 @@
 <script>document.documentElement.classList.add('js')</script>
 
 <title>TEMPLE — El carácter se forja</title>
-<meta name="description" content="El carácter se forja. Polo, hoodie, campera y accesorios de rugby. Diseñado para el rugby, hecho para durar. Pedí por WhatsApp. Argentina.">
+<meta name="description" content="Ropa y objetos de rugby en Argentina: Polo, Hoodie, Campera y accesorios Temple. Conocé la colección y empezá tu pedido por WhatsApp.">
 <meta name="theme-color" content="#faf9f6" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#141311" media="(prefers-color-scheme: dark)">
 
@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="Temple">
 <meta property="og:url" content="https://t1mpl2xv.pages.dev/">
 <meta property="og:title" content="TEMPLE — El carácter se forja">
-<meta property="og:description" content="Ropa y objetos para los que juegan al rugby. Polo, hoodie, campera y accesorios. Pedí por WhatsApp.">
+<meta property="og:description" content="Ropa y objetos de rugby en Argentina. Conocé la colección Temple y empezá tu pedido por WhatsApp.">
 <meta property="og:image" content="https://t1mpl2xv.pages.dev/images/temple-og-1200.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -212,70 +212,34 @@ h1,h2,h3,h4{
    Hero
    ───────────────────────────────────────────── */
 .hero{
-  position:relative;isolation:isolate;
-  display:flex;align-items:flex-end;
-  min-height:92vh;min-height:92svh;
   overflow:hidden;background:#0d0b09;color:#fff;
   scroll-margin-top:4.5rem;
 }
-.hero-plate{position:absolute;inset:0;z-index:-2;overflow:hidden}
-.hero-plate::after{
-  content:"";position:absolute;inset:0;z-index:1;
-  background:linear-gradient(180deg,rgba(13,11,9,.14) 0%,rgba(13,11,9,.26) 34%,rgba(13,11,9,.70) 47%,rgba(13,11,9,.84) 68%,rgba(13,11,9,.94) 100%);
+.hero-plate{
+  height:clamp(17rem,38svh,31rem);
+  overflow:hidden;background:#0d0b09;
 }
 .hero-img{
   width:100%;height:100%;object-fit:cover;object-position:center 38%;
   animation:heroZoom 1.7s cubic-bezier(.16,1,.3,1) both;
 }
 .hero-inner{
-  position:relative;z-index:1;
-  padding-block:clamp(3.5rem,10vh,6.5rem) clamp(2.75rem,7vh,4.5rem);
+  padding-block:clamp(1.75rem,4vw,3rem);
 }
-
-.hero-title{font-weight:400;margin:0}
-.wordmark{
-  display:flex;justify-content:space-between;width:100%;
-  font-family:var(--font-display);
-  font-size:6rem;
-  line-height:.88;letter-spacing:0;
-  color:#fff;text-transform:uppercase;
-}
-.wordmark>span{display:block;animation:letterRise .95s cubic-bezier(.16,1,.3,1) both}
-.wordmark>span:nth-child(1){animation-delay:.05s}
-.wordmark>span:nth-child(2){animation-delay:.11s}
-.wordmark>span:nth-child(3){animation-delay:.17s}
-.wordmark>span:nth-child(4){animation-delay:.23s}
-.wordmark>span:nth-child(5){animation-delay:.29s}
-.wordmark>span:nth-child(6){animation-delay:.35s}
-
-.tagline{
-  display:block;margin-top:clamp(.85rem,2.4vh,1.4rem);
-  font-family:var(--font-display);
-  font-size:clamp(1.05rem,2.4vw,1.7rem);
-  line-height:1.15;letter-spacing:-.02em;
-  color:#e8d5c4;text-wrap:balance;
-  animation:fadeUp .8s cubic-bezier(.16,1,.3,1) .5s both;
+.hero-title{
+  max-width:14ch;margin:0;
+  color:#fff;font-size:clamp(1.9rem,4.2vw,3rem);
+  line-height:.95;letter-spacing:-.03em;text-transform:uppercase;
+  text-wrap:balance;
 }
 .hero-lede{
-  max-width:54ch;margin:clamp(1.25rem,3vh,1.9rem) 0 clamp(1.6rem,3.5vh,2.3rem);
+  max-width:50ch;margin:.9rem 0 1.4rem;
   color:#e3ddd7;
-  font-size:clamp(1rem,1.5vw,1.15rem);line-height:1.55;
-  animation:fadeUp .8s cubic-bezier(.16,1,.3,1) .62s both;
+  font-size:clamp(1rem,1.5vw,1.15rem);line-height:1.5;
 }
-.hero-actions{
-  display:flex;flex-wrap:wrap;gap:.85rem;
-  animation:fadeUp .8s cubic-bezier(.16,1,.3,1) .74s both;
-}
+.hero-actions{display:flex;flex-wrap:wrap;gap:.85rem}
 
 @keyframes heroZoom{from{transform:scale(1.09)}to{transform:scale(1)}}
-@keyframes letterRise{
-  from{opacity:0;transform:translateY(.38em);filter:blur(9px)}
-  to{opacity:1;transform:none;filter:blur(0)}
-}
-@keyframes fadeUp{
-  from{opacity:0;transform:translateY(16px)}
-  to{opacity:1;transform:none}
-}
 
 /* ─────────────────────────────────────────────
    Manifesto band
@@ -297,6 +261,12 @@ h1,h2,h3,h4{
 .section{padding:6.5rem 0;scroll-margin-top:4.5rem}
 .section-title{font-size:clamp(1.9rem,4.2vw,3rem);line-height:.95}
 .section-head{margin-bottom:3rem}
+.section-summary{
+  max-width:55ch;margin:.85rem 0 0;
+  color:var(--ink-dim);font-size:1rem;line-height:1.5;
+}
+#coleccion.section{padding-top:clamp(2rem,4vw,3.5rem)}
+#coleccion .section-head{margin-bottom:clamp(1.5rem,3vw,2.25rem)}
 
 .band-surface{
   background:var(--surface);
@@ -574,27 +544,13 @@ h1,h2,h3,h4{
 /* ─────────────────────────────────────────────
    Responsive
    ───────────────────────────────────────────── */
-@media (max-width:1100px){
-  .wordmark{font-size:4.75rem}
-}
 @media (max-width:900px){
   .section{padding:5rem 0}
   .band-statement{font-size:2.5rem}
 }
 @media (max-width:860px){
   .contact-grid{grid-template-columns:1fr}
-
-  /* Hero stacked: plate on top, copy on solid dark — no scrim needed behind text */
-  .hero{display:block;min-height:0}
-  .hero-plate{position:relative;inset:auto;aspect-ratio:4/3}
-  .hero-img{object-position:center center}
-  .hero-plate::after{
-    background:linear-gradient(180deg,rgba(13,11,9,.20) 0%,rgba(13,11,9,.06) 55%,rgba(13,11,9,.55) 88%,rgba(13,11,9,.92) 100%);
-  }
-  .hero-inner{padding-block:2.5rem 3.25rem}
-}
-@media (max-width:700px){
-  .wordmark{font-size:3.5rem}
+  .hero-plate{height:clamp(16.5rem,56vw,22rem)}
 }
 @media (max-width:640px){
   .wrap{padding-inline:1.25rem}
@@ -604,7 +560,15 @@ h1,h2,h3,h4{
   .section-head{margin-bottom:2rem}
   .band{padding:3rem 0}
   .band-statement{font-size:2rem}
-  .hero-actions .btn{flex:1 1 auto}
+  .hero-plate{height:220px}
+  .hero-inner{padding-block:1.25rem}
+  .hero-title{font-size:clamp(2.15rem,9vw,2.65rem)}
+  .hero-lede{margin:.6rem 0 1rem;font-size:.95rem}
+  .hero-actions{gap:.65rem}
+  .hero-actions .btn{flex:1 1 9rem;padding:.85rem .25rem;font-size:.72rem}
+  #coleccion.section{padding:1.25rem 0 3.75rem}
+  #coleccion .section-head{margin-bottom:1.25rem}
+  #coleccion .section-summary{margin-top:.45rem;font-size:1rem}
 }
 
 @media (prefers-reduced-motion:reduce){
@@ -767,9 +731,10 @@ h1,h2,h3,h4{
       <span>Temple</span>
     </a>
     <ul class="nav-links" role="list">
-      <li><a href="#coleccion" aria-label="Colección">Colección</a></li>
-      <li><a href="#lookbook" aria-label="Lookbook">Lookbook</a></li>
-      <li><a href="#contacto" aria-label="Contacto">Contacto</a></li>
+      <li><a href="#coleccion">Colección</a></li>
+      <li><a href="#lookbook">Lookbook</a></li>
+      <li><a href="#accesorios">Accesorios</a></li>
+      <li><a href="#contacto">Contacto</a></li>
     </ul>
     <a class="btn btn-solid btn-sm" href="https://wa.me/?text=Hola%20Temple" aria-label="Pedir">Pedir</a>
   </div>
@@ -790,29 +755,20 @@ h1,h2,h3,h4{
     </div>
 
     <div class="wrap hero-inner">
-      <h1 class="hero-title">
-        <span class="sr-only">Temple</span>
-        <span class="wordmark" aria-hidden="true"><span>T</span><span>E</span><span>M</span><span>P</span><span>L</span><span>E</span></span>
-        <span class="tagline">El carácter se forja</span>
-      </h1>
-      <p class="hero-lede">En el rugby, la fuerza no está solamente en el cuerpo. Está en la cabeza, y en la capacidad de levantarse después de cada tackle.</p>
+      <h1 class="hero-title">El carácter se forja</h1>
+      <p class="hero-lede">En el rugby, la fuerza también está en la cabeza y en levantarse después de cada tackle.</p>
       <div class="hero-actions">
-        <a class="btn btn-cream" href="#coleccion"> aria-label="btn-cream">btn-creamVer colección
-        <a class="btn btn-ghost" href="https://wa.me/?text=Hola%20Temple"> aria-label="btn-ghost">btn-ghostPedir por WhatsApp
+        <a class="btn btn-cream" href="https://wa.me/?text=Hola%20Temple">Pedir por WhatsApp</a>
+        <a class="btn btn-ghost" href="#coleccion">Ver colección</a>
       </div>
     </div>
   </header>
-
-  <section class="band">
-    <div class="wrap">
-      <p class="band-statement">Diseñado para el rugby, hecho para durar.</p>
-    </div>
-  </section>
 
   <section class="section" id="coleccion" aria-labelledby="coleccion-t">
     <div class="wrap">
       <div class="section-head">
         <h2 class="section-title" id="coleccion-t">Lo que te ponés después</h2>
+        <p class="section-summary">Polo, hoodie y campera para el club y el after.</p>
       </div>
 
       <ul class="products" role="list">
@@ -828,7 +784,7 @@ h1,h2,h3,h4{
             </span>
             <span class="product-body">
               <h3>Polo</h3>
-              <span class="product-desc">La calma de todos los días. Se entra al club con esto puesto y se sale igual.</span>
+              <span class="product-desc">Un polo para seguir en el club cuando termina el partido.</span>
               <span class="product-price">$ 89.000</span>
               <div class="picker" data-picker="polo"></div>
               <noscript>
@@ -850,7 +806,7 @@ h1,h2,h3,h4{
             </span>
             <span class="product-body">
               <h3>Hoodie</h3>
-              <span class="product-desc">Quedarse cuando el resto ya se fue. El after, el frío, el grupo.</span>
+              <span class="product-desc">Para el frío después del partido y las horas que siguen en el club.</span>
               <span class="product-price">$ 124.000</span>
               <div class="picker" data-picker="hoodie"></div>
               <noscript>
@@ -872,7 +828,7 @@ h1,h2,h3,h4{
             </span>
             <span class="product-body">
               <h3>Campera</h3>
-              <span class="product-desc">Salir de nuevo después del golpe. Para el viaje y el día difícil.</span>
+              <span class="product-desc">Una campera para el viaje, la cancha y el regreso al club.</span>
               <span class="product-price">$ 168.000</span>
               <div class="picker" data-picker="campera"></div>
               <noscript>
@@ -886,10 +842,77 @@ h1,h2,h3,h4{
     </div>
   </section>
 
+  <section class="band">
+    <div class="wrap">
+      <p class="band-statement">Diseñado para el rugby, hecho para durar.</p>
+    </div>
+  </section>
+
+  <section class="section" id="lookbook" aria-labelledby="lookbook-t">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 class="section-title" id="lookbook-t">Del tackle al after</h2>
+        <p class="section-summary">La cancha, el equipo y lo que compartimos después del partido.</p>
+      </div>
+
+      <ul class="lookbook-grid" role="list">
+        <li>
+          <figure class="look">
+            <span class="media reveal">
+              <img src="https://images.unsplash.com/photo-1574618500275-a5d3458db385?q=72&auto=format&fit=crop&w=840"
+                   srcset="https://images.unsplash.com/photo-1574618500275-a5d3458db385?q=72&auto=format&fit=crop&w=560 560w,
+                           https://images.unsplash.com/photo-1574618500275-a5d3458db385?q=72&auto=format&fit=crop&w=840 840w,
+                           https://images.unsplash.com/photo-1574618500275-a5d3458db385?q=72&auto=format&fit=crop&w=1200 1200w"
+                   sizes="(max-width:700px) calc(100vw - 40px), (max-width:1100px) 45vw, 30vw"
+                   width="840" height="1120" alt="Jugadores de rugby en acción en el campo" loading="lazy" decoding="async">
+            </span>
+            <figcaption>
+              <h3>El golpe</h3>
+              <p>El tackle no es el final. Nos levantamos con el de al lado.</p>
+            </figcaption>
+          </figure>
+        </li>
+        <li>
+          <figure class="look">
+            <span class="media reveal">
+              <img src="https://images.unsplash.com/photo-1782611538903-e711d32b1f88?q=72&auto=format&fit=crop&w=840"
+                   srcset="https://images.unsplash.com/photo-1782611538903-e711d32b1f88?q=72&auto=format&fit=crop&w=560 560w,
+                           https://images.unsplash.com/photo-1782611538903-e711d32b1f88?q=72&auto=format&fit=crop&w=840 840w,
+                           https://images.unsplash.com/photo-1782611538903-e711d32b1f88?q=72&auto=format&fit=crop&w=1200 1200w"
+                   sizes="(max-width:700px) calc(100vw - 40px), (max-width:1100px) 45vw, 30vw"
+                   width="840" height="1120" alt="Grupo de jugadores después del partido" loading="lazy" decoding="async">
+            </span>
+            <figcaption>
+              <h3>El after</h3>
+              <p>Cuando termina el partido, el grupo sigue.</p>
+            </figcaption>
+          </figure>
+        </li>
+        <li>
+          <figure class="look">
+            <span class="media reveal">
+              <img src="https://images.unsplash.com/photo-1594882645126-14020914d58d?q=72&auto=format&fit=crop&w=840"
+                   srcset="https://images.unsplash.com/photo-1594882645126-14020914d58d?q=72&auto=format&fit=crop&w=560 560w,
+                           https://images.unsplash.com/photo-1594882645126-14020914d58d?q=72&auto=format&fit=crop&w=840 840w,
+                           https://images.unsplash.com/photo-1594882645126-14020914d58d?q=72&auto=format&fit=crop&w=1200 1200w"
+                   sizes="(max-width:700px) calc(100vw - 40px), (max-width:1100px) 45vw, 30vw"
+                   width="840" height="1120" alt="Silueta de una persona entrenando al atardecer" loading="lazy" decoding="async">
+            </span>
+            <figcaption>
+              <h3>El entrenamiento</h3>
+              <p>La calma y la cabeza fría también se entrenan.</p>
+            </figcaption>
+          </figure>
+        </li>
+      </ul>
+    </div>
+  </section>
+
   <section class="section band-surface" id="accesorios" aria-labelledby="accesorios-t">
     <div class="wrap">
       <div class="section-head">
-        <h2 class="section-title" id="accesorios-t">Lo que queda en la pared</h2>
+        <h2 class="section-title" id="accesorios-t">Para llevar el club con vos</h2>
+        <p class="section-summary">Cuadro, cartas y taza para que el rugby siga presente después del partido.</p>
       </div>
 
       <ul class="access-grid" role="list">
@@ -1024,13 +1047,12 @@ h1,h2,h3,h4{
       </ul>
     </div>
   </section>
-
   <section class="section band-surface" id="contacto" aria-labelledby="contacto-t">
     <div class="wrap contact-grid">
       <div>
         <h2 class="section-title" id="contacto-t">Pedí por WhatsApp</h2>
-        <p class="contact-lead">Contame qué querés. Te respondo rápido.</p>
-        <a class="btn btn-solid btn-lg" href="https://wa.me/?text=Hola%20Temple"> aria-label="btn-solid btn-lg">btn-solid btn-lgEscribir por WhatsApp
+        <p class="contact-lead">Contame qué prenda u objeto te interesa y empezamos tu pedido.</p>
+        <a class="btn btn-solid btn-lg" href="https://wa.me/?text=Hola%20Temple">Escribir por WhatsApp</a>
       </div>
       <div class="contact-alt">
         <h3>También</h3>
